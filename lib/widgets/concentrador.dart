@@ -106,50 +106,53 @@ class _ConcentradorState extends State<Concentrador> {
                                   ),
                                 ],
                                 color: Colors.green),
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                    width: 120,
-                                    child: Text(
-                                      'Asignatura',
-                                      style: styleHeader,
-                                    )),
-                                SizedBox(
-                                    width: 50,
-                                    child: Center(
-                                        child: Text(
-                                      'P1',
-                                      style: styleHeader,
-                                    ))),
-                                SizedBox(
-                                    width: 50,
-                                    child: Center(
-                                        child: Text(
-                                      'P2',
-                                      style: styleHeader,
-                                    ))),
-                                SizedBox(
-                                    width: 50,
-                                    child: Center(
-                                        child: Text(
-                                      'P3',
-                                      style: styleHeader,
-                                    ))),
-                                SizedBox(
-                                    width: 50,
-                                    child: Center(
-                                        child: Text(
-                                      'P4',
-                                      style: styleHeader,
-                                    ))),
-                                SizedBox(
-                                    width: 50,
-                                    child: Center(
-                                        child: Text(
-                                      'Def',
-                                      style: styleHeader,
-                                    ))),
-                              ],
+                            child: Expanded(
+                              flex: 1,
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                      width: 120,
+                                      child: Text(
+                                        'Asignatura',
+                                        style: styleHeader,
+                                      )),
+                                  SizedBox(
+                                      width: 50,
+                                      child: Center(
+                                          child: Text(
+                                        'P1',
+                                        style: styleHeader,
+                                      ))),
+                                  SizedBox(
+                                      width: 50,
+                                      child: Center(
+                                          child: Text(
+                                        'P2',
+                                        style: styleHeader,
+                                      ))),
+                                  SizedBox(
+                                      width: 50,
+                                      child: Center(
+                                          child: Text(
+                                        'P3',
+                                        style: styleHeader,
+                                      ))),
+                                  SizedBox(
+                                      width: 50,
+                                      child: Center(
+                                          child: Text(
+                                        'P4',
+                                        style: styleHeader,
+                                      ))),
+                                  SizedBox(
+                                      width: 50,
+                                      child: Center(
+                                          child: Text(
+                                        'Def',
+                                        style: styleHeader,
+                                      ))),
+                                ],
+                              ),
                             ),
                           ),
                           const SizedBox(height: 20)

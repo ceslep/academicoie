@@ -7,6 +7,7 @@ import 'package:academicoie/estud_provider.dart';
 import 'package:academicoie/estudiante_provider.dart';
 import 'package:academicoie/inasistencias_provider.dart';
 import 'package:academicoie/notas_provider.dart';
+import 'package:academicoie/puestos_provider.dart';
 import 'package:academicoie/total_estudiantes_provider.dart';
 import 'package:academicoie/widgets/custom_alert.dart';
 import 'package:academicoie/widgets/entrada_app.dart';
@@ -34,7 +35,8 @@ void main() {
         ChangeNotifierProvider(create: (context) => InasistenciasProvider()),
         ChangeNotifierProvider(create: (context) => EstudProvider()),
         ChangeNotifierProvider(create: (context) => ConvivenciaProvider()),
-        ChangeNotifierProvider(create: (context) => TotalEstudiantesProvider())
+        ChangeNotifierProvider(create: (context) => TotalEstudiantesProvider()),
+        ChangeNotifierProvider(create: (context) => PuestosProvider())
 
         // Agrega más providers si es necesario
       ],

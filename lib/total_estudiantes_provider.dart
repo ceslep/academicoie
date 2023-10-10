@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:academicoie/modelo_Estudiantes.dart';
+import 'package:academicoie/modelo_estudiantes.dart';
 
 const String urlbase = 'https://app.iedeoccidente.com';
 

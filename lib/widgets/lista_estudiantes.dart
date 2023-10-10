@@ -5,7 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import 'package:academicoie/total_estudiantes_provider.dart';
 
-import '../modelo_Estudiantes.dart';
+import '../modelo_estudiantes.dart';
 
 class ListaEstudiantes extends StatefulWidget {
   const ListaEstudiantes({Key? key}) : super(key: key);

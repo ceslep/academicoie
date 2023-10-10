@@ -1,10 +1,11 @@
 // ignore_for_file: avoid_print, use_build_context_synchronously
 
+import 'package:academicoie/widgets/puestos.dart';
 import 'package:flutter/material.dart';
 import 'package:academicoie/convivencia_provider.dart';
 import 'package:academicoie/inasistencias_provider.dart';
 import 'package:academicoie/main.dart';
-import 'package:academicoie/modelo_Convivencia.dart';
+import 'package:academicoie/modelo_convivencia.dart';
 import 'package:academicoie/modelo_inasistencias.dart';
 import 'package:academicoie/modelo_notas.dart';
 import 'package:academicoie/notas_provider.dart';
@@ -80,6 +81,10 @@ class _EntradaAppState extends State<EntradaApp>
       icon: Icon(Icons.calculate_sharp),
     ),
     Tab(
+      key: Key('puestos'),
+      icon: Icon(Icons.military_tech),
+    ),
+    Tab(
       icon: Icon(Icons.access_time_filled),
     ),
     Tab(
@@ -96,6 +101,7 @@ class _EntradaAppState extends State<EntradaApp>
   void initState() {
     super.initState();
     _tabController = TabController(vsync: this, length: tabs.length);
+
     init();
   }
 
@@ -269,6 +275,7 @@ class _EntradaAppState extends State<EntradaApp>
                   ),
                 ],
               ),
+              const Puestos(),
               Inasistencias(
                   inasistencias: listaInasistencias, periodoActual: periodo),
               Convivencia(convivencia: listaConvivencia),
