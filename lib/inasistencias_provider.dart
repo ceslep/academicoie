@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:academicoie/modelo_inasistencias.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
