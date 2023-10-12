@@ -84,6 +84,16 @@ class _ConcentradorState extends State<Concentrador> {
           List<ModeloNotas> notas = widget.notasPeriodos
               .where((nota) => nota.asignatura == asignatura)
               .toList();
+          int cantidadPeriodos = notas.length;
+          List<SizedBox> arreglo = List.generate(
+              4 - cantidadPeriodos,
+              (i) => const SizedBox(
+                    width: 50,
+                    child: Center(
+                        child:
+                            Text("0.0", style: TextStyle(color: Colors.white))),
+                  ));
+          double def = 0;
           return ListTile(
             title: Column(
               children: [
@@ -106,53 +116,50 @@ class _ConcentradorState extends State<Concentrador> {
                                   ),
                                 ],
                                 color: Colors.green),
-                            child: Expanded(
-                              flex: 1,
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                      width: 120,
-                                      child: Text(
-                                        'Asignatura',
-                                        style: styleHeader,
-                                      )),
-                                  SizedBox(
-                                      width: 50,
-                                      child: Center(
-                                          child: Text(
-                                        'P1',
-                                        style: styleHeader,
-                                      ))),
-                                  SizedBox(
-                                      width: 50,
-                                      child: Center(
-                                          child: Text(
-                                        'P2',
-                                        style: styleHeader,
-                                      ))),
-                                  SizedBox(
-                                      width: 50,
-                                      child: Center(
-                                          child: Text(
-                                        'P3',
-                                        style: styleHeader,
-                                      ))),
-                                  SizedBox(
-                                      width: 50,
-                                      child: Center(
-                                          child: Text(
-                                        'P4',
-                                        style: styleHeader,
-                                      ))),
-                                  SizedBox(
-                                      width: 50,
-                                      child: Center(
-                                          child: Text(
-                                        'Def',
-                                        style: styleHeader,
-                                      ))),
-                                ],
-                              ),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                    width: 120,
+                                    child: Text(
+                                      'Asignatura',
+                                      style: styleHeader,
+                                    )),
+                                SizedBox(
+                                    width: 50,
+                                    child: Center(
+                                        child: Text(
+                                      'P1',
+                                      style: styleHeader,
+                                    ))),
+                                SizedBox(
+                                    width: 50,
+                                    child: Center(
+                                        child: Text(
+                                      'P2',
+                                      style: styleHeader,
+                                    ))),
+                                SizedBox(
+                                    width: 50,
+                                    child: Center(
+                                        child: Text(
+                                      'P3',
+                                      style: styleHeader,
+                                    ))),
+                                SizedBox(
+                                    width: 50,
+                                    child: Center(
+                                        child: Text(
+                                      'P4',
+                                      style: styleHeader,
+                                    ))),
+                                SizedBox(
+                                    width: 50,
+                                    child: Center(
+                                        child: Text(
+                                      'Def',
+                                      style: styleHeader,
+                                    ))),
+                              ],
                             ),
                           ),
                           const SizedBox(height: 20)
@@ -168,6 +175,7 @@ class _ConcentradorState extends State<Concentrador> {
                     Row(
                       children: notas.map((nota) {
                         double value = double.parse(nota.valoracion);
+                        def += value;
                         TextStyle style = value < 3
                             ? const TextStyle(color: Colors.red)
                             : const TextStyle(color: Colors.blue);
@@ -176,7 +184,26 @@ class _ConcentradorState extends State<Concentrador> {
                             child: Center(
                                 child: Text(nota.valoracion, style: style)));
                       }).toList(),
-                    )
+                    ),
+                    Row(
+                      children: arreglo,
+                    ),
+                    SizedBox(
+                        width: 50,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Center(
+                              child: Text(
+                            (def / 4).toStringAsFixed(1),
+                            style: (def / 4) < 3
+                                ? const TextStyle(
+                                    color: Colors.red,
+                                    fontWeight: FontWeight.bold)
+                                : const TextStyle(
+                                    color: Colors.blue,
+                                    fontWeight: FontWeight.bold),
+                          )),
+                        ))
                     //  notas.map((nota) => Text(nota.valoracion))
                   ],
                 ),

@@ -77,6 +77,7 @@ class _LoginState extends State<Login> {
             controller: widget.usController,
             decoration: const InputDecoration(
               labelText: "Usuario",
+              hintText: "Ingrese su documento de identidad",
             ),
           ),
         ),
@@ -91,6 +92,7 @@ class _LoginState extends State<Login> {
             obscureText: true,
             decoration: const InputDecoration(
               labelText: "Contraseña",
+              hintText: "Ingrese su contraseña",
             ),
           ),
         ),
