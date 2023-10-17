@@ -145,7 +145,12 @@ class ListaInasistencias extends StatelessWidget {
                   const SizedBox(width: 10),
                   const Text('Horas:'),
                   const SizedBox(width: 10),
-                  Text(inasistencia.horas,
+                  Text(
+                      inasistencia.horas != 'f' && inasistencia.horas != 'r'
+                          ? inasistencia.horas
+                          : inasistencia.horas == 'f'
+                              ? 'Fuga de Clase'
+                              : 'Retardo',
                       style: const TextStyle(
                           color: Colors.red, fontWeight: FontWeight.bold))
                 ],

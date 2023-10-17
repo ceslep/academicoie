@@ -275,7 +275,10 @@ class _EntradaAppState extends State<EntradaApp>
                   ),
                 ],
               ),
-              const Puestos(),
+              Puestos(
+                periodo: periodo,
+                asignacion: estudianteProvider.asignacion,
+              ),
               Inasistencias(
                   inasistencias: listaInasistencias, periodoActual: periodo),
               Convivencia(convivencia: listaConvivencia),

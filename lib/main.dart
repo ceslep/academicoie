@@ -144,6 +144,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
         estudianteProvider.setEstudiante(jsonResponse['estudiante']);
         estudianteProvider.setPeriodo(jsonResponse['periodo']);
         estudianteProvider.setGrado(jsonResponse['grado']);
+        estudianteProvider.setAsignacion(jsonResponse['asignacion']);
 
         final inasistenciasProvider =
             Provider.of<InasistenciasProvider>(context, listen: false);

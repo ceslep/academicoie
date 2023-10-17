@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:academicoie/modelo_Puestos.dart';
+import 'package:academicoie/modelo_puestos.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -13,9 +13,9 @@ class PuestosProvider extends ChangeNotifier {
   List<ModeloPuestos> get data => _data;
 
   Future<void> updateData(
-      String estudiante, String periodo, String year) async {
+      String asignacion, String periodo, String year) async {
     final List<Map<String, dynamic>> data =
-        await fetchDataFromJson(estudiante, periodo, year);
+        await fetchDataFromJson(asignacion, periodo, year);
     print({'lengthdataPuestos': data.length});
     setData(data);
   }
@@ -29,11 +29,11 @@ class PuestosProvider extends ChangeNotifier {
   }
 
   Future<List<Map<String, dynamic>>> fetchDataFromJson(
-      String estudiante, String periodo, String year) async {
+      String asignacion, String periodo, String year) async {
     final url = Uri.parse('$urlbase/generaPuestos2.php');
 
     final bodyData = json
-        .encode({'asignacion': estudiante, 'periodo': periodo, 'year': year});
+        .encode({'asignacion': asignacion, 'periodo': periodo, 'year': year});
     final response = await http.post(url, body: bodyData);
     if (response.statusCode == 200) {
       final jsonResponse = json.decode(response.body);
