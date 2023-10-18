@@ -155,23 +155,6 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
         inasistenciasProvider.setData(listaInasistencias);
         print({'inas1': inasistenciasProvider.data.length});
 
-        /* final urlConvivencia = Uri.parse('$urlbase/est/php/getConvivencia.php');
-        final bodyDataConvivencia = json.encode({
-          'estudiante': usuarioController.text,
-          'year': (DateTime.now()).year.toString()
-        });
-        final responseConvivencia =
-            await http.post(urlConvivencia, body: bodyDataConvivencia);
-        final jsonResponseConvivencia = json.decode(responseConvivencia.body);
-        final dataConvivencia = jsonResponseConvivencia as List<dynamic>;
-        final listaConvivencia = dataConvivencia
-            .map((item) => item as Map<String, dynamic>)
-            .toList();
-
-        final convivenciaProvider =
-            Provider.of<ConvivenciaProvider>(context, listen: false);
-        convivenciaProvider.setData(listaConvivencia); */
-
         guardarValorLocal(estudianteProvider.estudiante);
       }
       return jsonResponse['acceso'] == 'si';
@@ -274,7 +257,9 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('I.E. de Occidente'),
+          title: const Column(
+            children: [Text('I.E. de Occidente')],
+          ),
           backgroundColor: const Color.fromARGB(255, 80, 137, 15),
           foregroundColor: Colors.white,
         ),

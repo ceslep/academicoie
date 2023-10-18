@@ -30,7 +30,7 @@ class _ListaEstudiantesState extends State<ListaEstudiantes> {
   void filterListado(String text) {
     if (text.length >= 4) {
       listadoFiltrado = listado.where((estudiante) {
-        print(estudiante);
+        print(estudiante.nombres);
         if (estudiante.nombres.contains(text) ||
             estudiante.estudiante.contains(text) ||
             estudiante.sede.contains(text)) {
@@ -56,7 +56,7 @@ class _ListaEstudiantesState extends State<ListaEstudiantes> {
     });
 
     _searchController.addListener(() {
-      final text = _searchController.text.toUpperCase();
+      final text = _searchController.text.toUpperCase().trim();
       filterListado(text);
       print('----->');
     });
@@ -78,27 +78,28 @@ class _ListaEstudiantesState extends State<ListaEstudiantes> {
               ),
               backgroundColor: Colors.lightBlueAccent,
             ),
-            body: listadoFiltrado.isNotEmpty
-                ? Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          controller: _searchController,
-                          decoration: InputDecoration(
-                            hintText: "Buscar",
-                            suffixIcon: IconButton(
-                              icon: const Icon(Icons.clear),
-                              onPressed: () {
-                                _searchController.clear();
-                                // _searchController.
-                                setState(() {});
-                              },
-                            ),
-                          ),
-                        ),
+            body: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    controller: _searchController,
+                    decoration: InputDecoration(
+                      labelText: 'Buscar',
+                      hintText: "Buscar estudiante",
+                      suffixIcon: IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          _searchController.clear();
+                          // _searchController.
+                          setState(() {});
+                        },
                       ),
-                      Expanded(
+                    ),
+                  ),
+                ),
+                listadoFiltrado.isNotEmpty
+                    ? Expanded(
                         child: ListView(
                           children: listadoFiltrado.map(
                             (estudiante) {
@@ -145,14 +146,14 @@ class _ListaEstudiantesState extends State<ListaEstudiantes> {
                             },
                           ).toList(),
                         ),
+                      )
+                    : const Center(
+                        child: SpinKitCircle(
+                          color: Colors.greenAccent, // Color de la animación
+                          size: 50.0, // Tamaño del widget
+                        ),
                       ),
-                    ],
-                  )
-                : const Center(
-                    child: SpinKitCircle(
-                      color: Colors.greenAccent, // Color de la animación
-                      size: 50.0, // Tamaño del widget
-                    ),
-                  )));
+              ],
+            )));
   }
 }

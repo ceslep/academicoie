@@ -4,7 +4,6 @@ import 'package:academicoie/puestos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:academicoie/estudiante_provider.dart';
 import 'package:academicoie/widgets/puestos_detallado.dart';
 
 class Puestos extends StatefulWidget {
@@ -77,21 +76,21 @@ class _PuestosState extends State<Puestos> {
 
   @override
   Widget build(BuildContext context) {
-    return puestos.isNotEmpty
-        ? GestureDetector(
-            onTap: () => iniciar(),
-            child: SizedBox(
+    return GestureDetector(
+      onTap: () {},
+      child: puestos.isNotEmpty
+          ? SizedBox(
               child: ListaPuestos(
                 puestos: puestos,
                 puesto: puestoEnLaSede,
                 grupo: estudianteProvider.grado,
                 puestoGrupo: puestoEnElGrupo,
               ),
+            )
+          : const SpinKitCubeGrid(
+              color: Colors.blue, // Color de la animación
+              size: 46.0,
             ),
-          )
-        : const SpinKitCubeGrid(
-            color: Colors.blue, // Color de la animación
-            size: 46.0,
-          );
+    );
   }
 }

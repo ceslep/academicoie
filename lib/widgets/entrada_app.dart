@@ -194,7 +194,16 @@ class _EntradaAppState extends State<EntradaApp>
               controller: _tabController,
               tabs: tabs,
             ),
-            title: const Text('Notas IedeOccidente'),
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Notas IedeOccidente'),
+                Text(
+                  '${estudianteProvider.nombres} ${estudianteProvider.grado}',
+                  style: const TextStyle(fontSize: 8, color: Colors.black87),
+                )
+              ],
+            ),
           ),
           body: TabBarView(
             controller: _tabController,
