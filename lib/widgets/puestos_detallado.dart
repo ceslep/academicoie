@@ -1,4 +1,4 @@
-import 'package:academicoie/modelo_puestos.dart';
+import 'package:academicoie2/modelo_puestos.dart';
 import 'package:flutter/material.dart';
 
 class ListaPuestos extends StatefulWidget {

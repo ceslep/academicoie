@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:academicoie/modelo_notas.dart';
+import 'package:academicoie2/modelo_notas.dart';
 
 /*  */
 

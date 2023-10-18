@@ -2,15 +2,15 @@
 //keytool -genkey -v -keystore key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
 import 'dart:convert';
 import 'dart:io';
-import 'package:academicoie/convivencia_provider.dart';
-import 'package:academicoie/estud_provider.dart';
-import 'package:academicoie/estudiante_provider.dart';
-import 'package:academicoie/inasistencias_provider.dart';
-import 'package:academicoie/notas_provider.dart';
-import 'package:academicoie/puestos_provider.dart';
-import 'package:academicoie/total_estudiantes_provider.dart';
-import 'package:academicoie/widgets/custom_alert.dart';
-import 'package:academicoie/widgets/entrada_app.dart';
+import 'package:academicoie2/convivencia_provider.dart';
+import 'package:academicoie2/estud_provider.dart';
+import 'package:academicoie2/estudiante_provider.dart';
+import 'package:academicoie2/inasistencias_provider.dart';
+import 'package:academicoie2/notas_provider.dart';
+import 'package:academicoie2/puestos_provider.dart';
+import 'package:academicoie2/total_estudiantes_provider.dart';
+import 'package:academicoie2/widgets/custom_alert.dart';
+import 'package:academicoie2/widgets/entrada_app.dart';
 import 'package:desktop_window/desktop_window.dart';
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';

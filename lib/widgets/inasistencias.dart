@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:academicoie/estudiante_provider.dart';
-import 'package:academicoie/inasistencias_provider.dart';
-import 'package:academicoie/modelo_inasistencias.dart';
-import 'package:academicoie/widgets/badge_text.dart';
-import 'package:academicoie/widgets/entrada_app.dart';
+import 'package:academicoie2/estudiante_provider.dart';
+import 'package:academicoie2/inasistencias_provider.dart';
+import 'package:academicoie2/modelo_inasistencias.dart';
+import 'package:academicoie2/widgets/badge_text.dart';
+import 'package:academicoie2/widgets/entrada_app.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 

@@ -2,8 +2,8 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:academicoie/modelo_convivencia.dart';
-import 'package:academicoie/widgets/convivencia_detallado.dart';
+import 'package:academicoie2/modelo_convivencia.dart';
+import 'package:academicoie2/widgets/convivencia_detallado.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';

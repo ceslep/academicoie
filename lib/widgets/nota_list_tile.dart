@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:academicoie/modelo_notas.dart';
-import 'package:academicoie/widgets/custom_alert.dart';
-import 'package:academicoie/widgets/notas_detalladas.dart';
+import 'package:academicoie2/modelo_notas.dart';
+import 'package:academicoie2/widgets/custom_alert.dart';
+import 'package:academicoie2/widgets/notas_detalladas.dart';
 
 class NotaListTile extends StatefulWidget {
   final ModeloNotas nota;

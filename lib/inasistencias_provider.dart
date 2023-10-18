@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:academicoie/modelo_inasistencias.dart';
+import 'package:academicoie2/modelo_inasistencias.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;

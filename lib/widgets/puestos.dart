@@ -1,10 +1,10 @@
-import 'package:academicoie/estudiante_provider.dart';
-import 'package:academicoie/modelo_puestos.dart';
-import 'package:academicoie/puestos_provider.dart';
+import 'package:academicoie2/estudiante_provider.dart';
+import 'package:academicoie2/modelo_puestos.dart';
+import 'package:academicoie2/puestos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:academicoie/widgets/puestos_detallado.dart';
+import 'package:academicoie2/widgets/puestos_detallado.dart';
 
 class Puestos extends StatefulWidget {
   final String periodo;

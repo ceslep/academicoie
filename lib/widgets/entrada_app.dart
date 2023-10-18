@@ -1,20 +1,20 @@
 // ignore_for_file: avoid_print, use_build_context_synchronously
 
-import 'package:academicoie/widgets/puestos.dart';
+import 'package:academicoie2/widgets/puestos.dart';
 import 'package:flutter/material.dart';
-import 'package:academicoie/convivencia_provider.dart';
-import 'package:academicoie/inasistencias_provider.dart';
-import 'package:academicoie/main.dart';
-import 'package:academicoie/modelo_convivencia.dart';
-import 'package:academicoie/modelo_inasistencias.dart';
-import 'package:academicoie/modelo_notas.dart';
-import 'package:academicoie/notas_provider.dart';
-import 'package:academicoie/widgets/concentrador.dart';
-import 'package:academicoie/widgets/convivencia.dart';
-import 'package:academicoie/widgets/desi_alert.dart';
-import 'package:academicoie/widgets/inasistencias.dart';
-import 'package:academicoie/widgets/menu_periodos.dart';
-import 'package:academicoie/widgets/nota_list_tile.dart';
+import 'package:academicoie2/convivencia_provider.dart';
+import 'package:academicoie2/inasistencias_provider.dart';
+import 'package:academicoie2/main.dart';
+import 'package:academicoie2/modelo_convivencia.dart';
+import 'package:academicoie2/modelo_inasistencias.dart';
+import 'package:academicoie2/modelo_notas.dart';
+import 'package:academicoie2/notas_provider.dart';
+import 'package:academicoie2/widgets/concentrador.dart';
+import 'package:academicoie2/widgets/convivencia.dart';
+import 'package:academicoie2/widgets/desi_alert.dart';
+import 'package:academicoie2/widgets/inasistencias.dart';
+import 'package:academicoie2/widgets/menu_periodos.dart';
+import 'package:academicoie2/widgets/nota_list_tile.dart';
 import 'package:provider/provider.dart';
 import '../estudiante_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';

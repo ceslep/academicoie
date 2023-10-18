@@ -1,0 +1,5 @@
+<resources>
+    <color name="colorPrimary">#RRGGBB</color>
+    <!-- Reemplaza #RRGGBB con el valor hexadecimal del color que deseas usar -->
+    <!-- Por ejemplo: <color name="colorPrimary">#3498db</color> -->
+</resources>
