@@ -1,4 +1,5 @@
 import 'package:academicoie2/modelo_puestos.dart';
+import 'package:academicoie2/widgets/los.dart';
 import 'package:flutter/material.dart';
 
 class ListaPuestos extends StatefulWidget {
@@ -70,9 +71,14 @@ class _ListaPuestosState extends State<ListaPuestos> {
                         'Puesto en el grupo:',
                       ),
                       const SizedBox(width: 10),
-                      Text(widget.puestoGrupo,
-                          style: const TextStyle(
-                              color: Colors.blue, fontWeight: FontWeight.bold)),
+                      Row(
+                        children: [
+                          Text(widget.puestoGrupo,
+                              style: const TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold)),
+                        ],
+                      ),
                     ],
                   )
                 ],
@@ -86,6 +92,14 @@ class _ListaPuestosState extends State<ListaPuestos> {
                   padding: const EdgeInsets.only(left: 12.0, top: 5),
                   child: ElevatedButton(
                       onPressed: () {
+                        /* print('...');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Los(
+                                    stilo: TextStyle(color: Colors.blue))));
+
+                        return; */
                         if (textoBoton == 'Ver el grupo') {
                           textoBoton = ' Ver la sede ';
                           botonColor = Colors.blueGrey;
